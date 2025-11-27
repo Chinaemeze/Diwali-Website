@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+.bungee-spice-regular {
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.diwali_logo {
+    height: 45px;
+    width: auto;
+}
+
+.hero-section {
+    height: 100dvh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./assets/hero_image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center; /*had to do this because flexbox wasn't achieving this effect for some reason*/
+}
+
+.hero-section p, .hero-heading, .hero-links {
+    animation: appear 1.1s ease-in forwards;
+    opacity: 0;
+}
+
+.hero-heading {animation-delay: 0.5s;}
+
+.hero-section p {animation-delay: 1.1s;}
+
+.hero-links {animation-delay: 1.7s;}
+
+/* ---------feature section ------- */
+.feature-section * {
+    animation: fadeIn 1s linear;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 20%;
+}
+
+.feature-section img {
+    width: 70%;
+}
+
+/* ---------location---------- */
+.location h3, 
+.location h4 {
+    color: rgb(27, 85, 102);
+}
+
+.location img {width: 40%;}
+
+.discount {
+    animation: emphasize 1.5s alternate infinite;
+    border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+    .diwali_logo {
+        height: 35px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(60px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes emphasize {
+    from {
+        color: rgb(233, 194, 21);
+        font-size: 1rem;
+        background-color: chocolate;
+    }
+    to {
+        color: hotpink;
+        font-size: 1.1rem;
+        background-color: chartreuse;
+    }
+}
