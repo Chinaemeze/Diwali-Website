@@ -6,8 +6,9 @@
   font-style: normal;
 }
 
-nav, section {
+nav, section, footer {
     max-width: 100dvw;
+    overflow-x: hidden;
 }
 
 .diwali_logo {
