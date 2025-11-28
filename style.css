@@ -8,7 +8,6 @@
 
 nav, section, footer {
     max-width: 100dvw;
-    overflow-x: hidden;
 }
 
 .diwali_logo {
@@ -40,6 +39,7 @@ nav, section, footer {
 
 /* ---------feature section ------- */
 .feature-section * {
+    transform: scale(0.65);
     animation: fadeIn 1s linear;
     animation-fill-mode: forwards;
     animation-timeline: view();
@@ -72,9 +72,11 @@ nav, section, footer {
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: scale(0.65);
     }
     to {
         opacity: 1;
+        transform: scale(1);
     }
 }
 
